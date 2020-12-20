@@ -1,39 +1,21 @@
 const questions = document.querySelectorAll('.question');
 
-//loop over btns
+questions.forEach(function (el) {
 
-// qBtn.forEach(function(btn) {
+    el.addEventListener('click', () => {
 
-//   btn.addEventListener('click', function(e) {
+        questions.forEach(function (e) {
 
-//     const question = e.currentTarget.parentElement.parentElement
+            if (e !== el) {
 
-//     question.classList.toggle('show-text');
-
-//   })
-// })
-
-
-
-//slectors inside element
-
-questions.forEach(function(question) {
-
-    const qBtn = question.querySelector('.question-btn');
-
-    qBtn.addEventListener("click", function() {
-
-        questions.forEach(function(item) {
-
-            if (item !== question) {
-
-                item.classList.remove('show-text');
+                e.classList.remove('show-text');
+                e.classList.remove('qHeight');
             }
-
         });
 
-        question.classList.toggle('show-text');
+        el.classList.toggle('show-text');
+        el.classList.toggle('qHeight');
+
 
     });
-
 });

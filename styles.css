@@ -200,6 +200,13 @@ Questions
   box-shadow: var(--light-shadow);
   padding: 1.5rem 1.5rem 0 1.5rem;
   margin-bottom: 2rem;
+  cursor: pointer;
+  max-height: 75px;
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
 }
 .question-title {
   display: flex;
@@ -234,11 +241,31 @@ Questions
 }
 /* hide text */
 .question-text {
-  display: none;
+  visibility: hidden;
+  transition: all 0.15s ease;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -ms-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
 }
 .show-text .question-text {
-  display: block;
+  visibility: visible;
+  transition: all 0.15s ease;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -ms-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
 }
+
+.qHeight {
+  max-height: 500px;
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+}
+
 .minus-icon {
   display: none;
 }
